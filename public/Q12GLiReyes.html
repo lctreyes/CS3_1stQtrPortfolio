@@ -25,3 +25,34 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Liz of Lithium :DD </h2>
+    <label> Meal Price:
+        <input id="price"/>
+    </label><br><br>
+    <label> Tip:
+        <input id="tip"/>
+    </label><br><br>
+    <label> Service Charge (%):
+        <input id="charge"/>
+    </label><br><br>
+
+    <button onclick="totalMeal()"> Accept Input </button>
+    <p id="output"></p>
+
+    <script>
+        function totalMeal() {
+            let mp = parseFloat(document.getElementById("price").value);
+            let tip = parseFloat(document.getElementById("tip").value);
+            let sc = parseFloat(document.getElementById("charge").value);
+            let totalCost = mp + tip + ((sc / 100) * mp);
+            
+            document.getElementById("output").innerHTML = "Total Meal: " + totalCost;
+        }
+    </script>
+
+</body>
+</html>
